@@ -4,7 +4,7 @@ output: html_document
 ---
 ## Description
 
-The dataset presented in the file 'tidyUCI_HAR.txt' is a distillation of some files found in the zip archive 'getdata_projectfiles_UCI HAR Dataset.zip'[1]. There are several files containing raw data from the experiments and two datasets ("training" and "test") that consist of values derrived from the raw data. The training and test datasets are structurally identical and vary only in the number of rows and the specific values stored in each. Each of these datasets is made up of three files, one each that contains the subject, the data (X values), and the activity-labels (y values). 
+The dataset presented in the file 'tidyUCI_HAR.txt' is a distillation of some of the files found in the zip archive 'getdata_projectfiles_UCI HAR Dataset.zip'[1]. There are several files containing raw data from the experiments and two datasets ("training" and "test") that consist of values derrived from the raw data. The training and test datasets are structurally identical and vary only in the number of rows and the specific values stored in each. Each of these datasets is made up of three files, one each that contains the subject, the data (X values), and the activity-labels (y values). 
 
 The collection and preprocessing of the original data is described in the excerpt from the original README.txt[1]:
 
@@ -97,7 +97,7 @@ Col Num | Tidy Variable Name | Units | Description | Variable Name in Source Dat
 ----|----------------|-------|---|------
 1|subject |   | The subject number, an integer from 1-30 | &nbsp; 
 2|activity |  |  A textual description of the subjects' activity, mapped from the file 'activity_labels.txt': 1=WALKING, 2=WALKING_UPSTAIRS, 3=WALKING_DOWNSTAIRS, 4=SITTING, 5=STANDING, 6=LAYING | &nbsp; 
-3|tBodyAcc.mean.X | g &nbsp;&nbsp;&nbsp;&nbsp; Note^1^| Mean of X axis body acceleration. | tBodyAcc-mean()-X
+3|tBodyAcc.mean.X | g &nbsp;&nbsp;&nbsp;&nbsp; (Note 1)| Mean of X axis body acceleration. | tBodyAcc-mean()-X
 4|tBodyAcc.mean.Y | g | Mean of Y axis body acceleration. | tBodyAcc-mean()-Y
 5|tBodyAcc.mean.Z | g | Mean of Z axis body acceleration. | tBodyAcc-mean()-Z
 6|tBodyAcc.std.X | g | Mean of standard deviations of X axis body acceleration. | tBodyAcc-std()-X
@@ -109,7 +109,7 @@ Col Num | Tidy Variable Name | Units | Description | Variable Name in Source Dat
 12|tGravityAcc.std.X | g | Mean of standard deviations of X axis gravity acceleration. | tGravityAcc-std()-X
 13|tGravityAcc.std.Y | g | Mean of standard deviations of Y axis gravity acceleration. | tGravityAcc-std()-Y
 14|tGravityAcc.std.Z | g | Mean of standard deviations of Z axis gravity acceleration. | tGravityAcc-std()-Z
-15|tBodyAccJerk.mean.X | g/sec Note^2^ | Mean of X axis body acceleration jerk. | tBodyAccJerk-mean()-X
+15|tBodyAccJerk.mean.X | g/sec (Note 2) | Mean of X axis body acceleration jerk. | tBodyAccJerk-mean()-X
 16|tBodyAccJerk.mean.Y | g/sec | Mean of Y axis body acceleration jerk. | tBodyAccJerk-mean()-Y
 17|tBodyAccJerk.mean.Z | g/sec | Mean of Z axis body acceleration jerk. | tBodyAccJerk-mean()-Z
 18|tBodyAccJerk.std.X | g/sec | Mean of standard deviations of X axis body acceleration jerk. | tBodyAccJerk-std()-X
@@ -121,12 +121,12 @@ Col Num | Tidy Variable Name | Units | Description | Variable Name in Source Dat
 24|tBodyGyro.std.X | rad/sec | Mean of standard deviations of X axis body gyroscope (angular velocity). | tBodyGyro-std()-X
 25|tBodyGyro.std.Y | rad/sec | Mean of standard deviations of Y axis body gyroscope (angular velocity). | tBodyGyro-std()-Y
 26|tBodyGyro.std.Z | rad/sec | Mean of standard deviations of Z axis body gyroscope (angular velocity). | tBodyGyro-std()-Z
-27|tBodyGyroJerk.mean.X | rad/sec^3^ Note^3^| Mean of X axis body gyroscope jerk. | tBodyGyroJerk-mean()-X
-28|tBodyGyroJerk.mean.Y | rad/sec^3^ | Mean of Y axis body gyroscope jerk. | tBodyGyroJerk-mean()-Y
-29|tBodyGyroJerk.mean.Z | rad/sec^3^ | Mean of Z axis body gyroscope jerk. | tBodyGyroJerk-mean()-Z
-30|tBodyGyroJerk.std.X | rad/sec^3^ | Mean of standard deviations of X axis body gyroscope jerk. | tBodyGyroJerk-std()-X
-31|tBodyGyroJerk.std.Y | rad/sec^3^ | Mean of standard deviations of Y axis body gyroscope jerk. | tBodyGyroJerk-std()-Y
-32|tBodyGyroJerk.std.Z | rad/sec^3^ | Mean of standard deviations of Z axis body gyroscope jerk. | tBodyGyroJerk-std()-Z
+27|tBodyGyroJerk.mean.X | rad/sec^3 (Note 3)| Mean of X axis body gyroscope jerk. | tBodyGyroJerk-mean()-X
+28|tBodyGyroJerk.mean.Y | rad/sec^3 | Mean of Y axis body gyroscope jerk. | tBodyGyroJerk-mean()-Y
+29|tBodyGyroJerk.mean.Z | rad/sec^3 | Mean of Z axis body gyroscope jerk. | tBodyGyroJerk-mean()-Z
+30|tBodyGyroJerk.std.X | rad/sec^3 | Mean of standard deviations of X axis body gyroscope jerk. | tBodyGyroJerk-std()-X
+31|tBodyGyroJerk.std.Y | rad/sec^3 | Mean of standard deviations of Y axis body gyroscope jerk. | tBodyGyroJerk-std()-Y
+32|tBodyGyroJerk.std.Z | rad/sec^3 | Mean of standard deviations of Z axis body gyroscope jerk. | tBodyGyroJerk-std()-Z
 33|tBodyAccMag.mean | g | Mean of body accelation magnitudes. | tBodyAccMag-mean()
 34|tBodyAccMag.std | g | Mean of standard deviations of body accelation magnitudes. | tBodyAccMag-std()
 35|tGravityAccMag.mean | g | Mean of mean gravity magnitudes. | tGravityAccMag-mean()
@@ -135,16 +135,16 @@ Col Num | Tidy Variable Name | Units | Description | Variable Name in Source Dat
 38|tBodyAccJerkMag.std | g/sec | Mean of standard deviations of body jerk magnitudes. | tBodyAccJerkMag-std()
 39|tBodyGyroMag.mean | rad/sec | Mean of body gyroscope magnitudes. | tBodyGyroMag-mean()
 40|tBodyGyroMag.std | rad/sec | Mean of standard deviations of body gyroscope magnitudes. | tBodyGyroMag-std()
-41|tBodyGyroJerkMag.mean | rad/sec^3^ | Mean of body gyroscope jerk magnitudes. | tBodyGyroJerkMag-mean()
-42|tBodyGyroJerkMag.std | rad/sec^3^ | Mean of standard deviations of body gyroscope jerk magnitudes. | tBodyGyroJerkMag-std()
+41|tBodyGyroJerkMag.mean | rad/sec^3 | Mean of body gyroscope jerk magnitudes. | tBodyGyroJerkMag-mean()
+42|tBodyGyroJerkMag.std | rad/sec^3 | Mean of standard deviations of body gyroscope jerk magnitudes. | tBodyGyroJerkMag-std()
 
 #### Notes on Units in the Variable Table
 
-Note^1^ - As described in the original README.txt, 'g' represents "standard gravity units". 
+Note 1 - As described in the original README.txt, 'g' represents "standard gravity units". 
 
-Note^2^ - The units for Acceleration Jerk are not specified in the original dataset but based on the angular velocity being radians/second, it has been presumed that all time is measured in seconds, so the units for jerk would but would most likely be g/sec.
+Note 2 - The units for Acceleration Jerk are not specified in the original dataset but based on the angular velocity being radians/second, it has been presumed that all time is measured in seconds, so the units for jerk would but would most likely be g/sec.
 
-Note^3^ - The units for Gyroscopic Jerk are not specified in the oritinal dataset, but assuming time is measured in seconds, then angular jerk, as the second derrivative of velocity would most likely be rad/sec^2.  It is somewhat surprising that the dataset is reporting angular velocity and angular jerk, but not angular acceleration.  
+Note 3 - The units for Gyroscopic Jerk are not specified in the oritinal dataset, but assuming time is measured in seconds, then angular jerk, as the second derrivative of velocity is most likely be measured in rad/sec^3.  It is somewhat surprising that the dataset is reporting angular velocity and angular jerk, but not angular acceleration.  
 
 ## References
 Details on the original work can be found in the following publication [1]:

@@ -23,7 +23,9 @@ You should create one R script called run_analysis.R that does the following.
 There are actually two datasets in the archive.  One for training and the other for testing.  The datasets are further broken up into three parts: a subject file, which simply lists which subject is associated with each row of the data; an "X" part which provides the rows of measured and calculated variables, and the "y" part which reveals the activity that was being performed for row. To be complete, each of the corresponding parts of the two datasets will be joined with rbind() and then the parts will be assembled with cbind(). (Other orders are possible.)
 
 ## Execution
-This script is standalone and takes no arguments.  To use is, open an R or RStudio console, change directory to the location that contains the script and the zip archive "getdata_projectfiles_UCI HAR Dataset.zip" and type 'source("run_analysis.R")'. The result will be a new file in the current directory called "tidy_UCI_HAR.txt". This file can be read in using a command like: ```read.table("tidy_UCI_HAR.txt",header=TRUE)```
+This script is standalone and takes no arguments.  To use is, open an R or RStudio console, change directory to the location that contains the script and the zip archive "getdata_projectfiles_UCI HAR Dataset.zip" and type 'source("run_analysis.R")'. The result will be a new file in the current directory called "tidy_UCI_HAR.txt". 
+
+This file can be read in using an instruction like: ```read.table("tidy_UCI_HAR.txt",header=TRUE)```
 
 
 ## Theory of operation
